@@ -1,4 +1,10 @@
-source 'https://rubygems.org'
+#source 'https://rubygems.org'
+source 'http://ruby.taobao.org/'
+
+## Rails-assets
+#  ------------
+#  A package manager that links up bundler and bower
+#   -> it is the source for all rails-assets-BOWER PACKAGE NAME gems
 source 'https://rails-assets.org'
 
 gem 'rails', '3.2.15'
@@ -21,6 +27,12 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'rails-assets-bootstrap'
+
+  gem 'rails-assets-backbone'
+  gem 'rails-assets-marionette'
+
+  # SKIM for Slim Javascript Templates
+  gem 'skim'
 
   gem 'uglifier', '>= 1.0.3'
 end
