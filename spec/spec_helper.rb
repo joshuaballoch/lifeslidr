@@ -74,7 +74,8 @@ Spork.prefork do
     config.run_all_when_everything_filtered = true
 
     config.before :suite do
-      DeferredGarbageCollection.start
+      # See GIGA DeferredGarbageCollection to add back
+      # DeferredGarbageCollection.start
 
       DatabaseCleaner.strategy = :transaction
       DatabaseCleaner.clean_with :truncation
@@ -89,7 +90,8 @@ Spork.prefork do
     config.after :each do
       DatabaseCleaner.clean
 
-      DeferredGarbageCollection.reconsider
+      # See GIGA DeferredGarbageCollection to add back
+      # DeferredGarbageCollection.reconsider
     end
   end
 end
