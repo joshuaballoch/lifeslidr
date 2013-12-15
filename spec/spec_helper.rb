@@ -47,7 +47,7 @@ Spork.prefork do
   # end
 
   Rails.logger.level = 4
-  Devise.stretches = 1
+  # Devise.stretches = 1
 
   RSpec.configure do |config|
     config.include FactoryGirl::Syntax::Methods
